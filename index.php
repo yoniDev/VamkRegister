@@ -49,7 +49,7 @@
         for ($i = 0; $i < count($myArray); $i++) {
             ?>
 
-            <div class="col-sm-3 col-xs-12">
+            <div class="col-sm-4 col-xs-12">
                 <div>
                     <img class="image-responsive img-rounded visitor-pic"
                          src="<?php $myArray[$i]["image"]; ?>">
