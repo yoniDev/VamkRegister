@@ -34,7 +34,7 @@
         </div>
 
         <div class="">
-            <h5 class="text-center">VAMK Registraion List</h5
+            <h5 class="text-center">VAMK Registraion List</h5>
         </div>
     </div>
 
@@ -45,6 +45,7 @@
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $data = curl_exec($ch);
         $myArray = json_decode($data, true);
+        curl_close($ch);
 
         for ($i = 0; $i < count($myArray); $i++) {
             ?>
@@ -62,11 +63,6 @@
                     <p>Email: <?php echo $myArray[$i]["email"]; ?></p>
                 </div>
             </div>
-
-            <?php
-        }
-        curl_close($ch);
-        ?>
     </div>
 </div>
 </body>
